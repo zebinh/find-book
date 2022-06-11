@@ -5,7 +5,15 @@
 		"path": "pages/Radio"
 	}, {
 		"path": "pages/Cart"
-	}],
+	}    ,{
+            "path" : "pages/NewBookShelf/NewBookShelf",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "新建书房",
+                "enablePullDownRefresh": false
+            }
+        }
+    ],
 	"tabBar": {
 		"selectedColor": "#DC2626",
 		"list": [{

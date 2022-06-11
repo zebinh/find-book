@@ -5,7 +5,7 @@
 			<view class="nickname">{{userInfo.nickName}}</view>
 			<button type="primary" size="mini" @click="updateProfile">同步微信信息</button>
 		</view>
-		<button type="warn" class="newBook">新建书房</button>
+		<button type="warn" class="newBook" @click="createBookShelf">新建书房</button>
 	</view>
 </template>
 
@@ -26,17 +26,31 @@
 					success: (res) => {
 						this.userInfo = Object.assign(this.userInfo, res.userInfo)
 						console.log(res)
+						console.info("get the token:", getApp().globalData)
 						
 						uniCloud.callFunction({
 							name: "doAction",
 							data: {
 								action: "updateProfile",
-								userInfo: this.userInfo
+								userInfo: this.userInfo,
+								token: getApp().globalData.token
 							},
 							success: (res) => {
 								console.log(res)
 							}
 						})
+					}
+				})
+			},
+			createBookShelf() {
+				console.info("navigateTo newBookShelf")
+				uni.navigateTo({
+					url: "NewBookShelf/NewBookShelf",
+					fail: (err) => {
+						console.error("navigateTo error:", err)
+					},
+					success: (res) => {
+						console.info("navigate success:", res)
 					}
 				})
 			}
@@ -54,8 +68,9 @@
 							code: code
 						},
 						success: (res) => {
-							console.log(res)
-							getApp().globalData.token = res.token
+							console.log("res with token:", res)
+							getApp().globalData.token = res.result.token
+							console.info("have set the token:", getApp().globalData)
 						}
 					})
 				}

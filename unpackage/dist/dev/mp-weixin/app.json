@@ -2,7 +2,8 @@
   "pages": [
     "pages/User",
     "pages/Radio",
-    "pages/Cart"
+    "pages/Cart",
+    "pages/NewBookShelf/NewBookShelf"
   ],
   "subPackages": [],
   "window": {
@@ -33,6 +34,11 @@
         "selectedIconPath": "static/radio_red.png"
       }
     ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "我就要用你的地理位置"
+    }
   },
   "usingComponents": {}
 }
