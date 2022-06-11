@@ -1,0 +1,39 @@
+{
+	"pages": [{
+		"path": "pages/User"
+	}, {
+		"path": "pages/Radio"
+	}, {
+		"path": "pages/Cart"
+	}],
+	"tabBar": {
+		"selectedColor": "#DC2626",
+		"list": [{
+				"text": "我的",
+				"pagePath": "pages/User",
+				"iconPath": "static/user.png",
+				"selectedIconPath": "static/user_red.png"
+			}, {
+				"text": "搜书",
+				"pagePath": "pages/Cart",
+				"iconPath": "static/cart.png",
+				"selectedIconPath": "static/cart_red.png"
+			},
+			{
+				"text": "附近",
+				"pagePath": "pages/Radio",
+				"iconPath": "static/radio.png",
+				"selectedIconPath": "static/radio_red.png"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "微图书",
+		"navigationBarBackgroundColor": "#DC2626",
+		"backgroundColor": "#DC2626",
+		"app-plus": {
+			"background": "#efeff4"
+		}
+	}
+}

@@ -1,0 +1,27 @@
+
+.container {
+	--tw-bg-opacity: 1;
+	background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+	height: 100vh;
+}
+.box {
+	display: flex;
+	flex-direction: column;
+	padding: 0.5em 0;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 1px solid rgba(156, 163, 175, var(--tw-bg-opacity));
+}
+.avatar {
+	width: 5em;
+	height: 5em;
+	--tw-bg-opacity: 1;
+	background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
+	margin: 0.25em 0;
+	border-radius: 9999px;
+}
+.newBook {
+	margin: 0.5em 1em;
+	border-radius: 9999px;
+}
+
